@@ -15,7 +15,7 @@ import Foundation
  - Цикли
  
  */
-
+//MARK: - Пункт 1.1
 // Псевдонім для зберігання деталей товару
 typealias ProductInfo = (String, Double, String, String, String)
 
@@ -37,12 +37,21 @@ let cart: [ProductInfo] = [
     (productName: "Asus ROG Strix B550-A Gaming", price: 6999.0, currency: "₴", socet: "sAM4", processor: "AMD"),
     (productName: "Asus ROG Strix B550-E Gaming", price: 8703.0, currency: "₴", socet: "sAM4", processor: "AMD")
 ]
+for cartIndex in 0 ..< cart.count{
+    let pname = cart[cartIndex]
+    print("------------------- \(cartIndex + 1) -------------------------------")
+    print("Назва товару: \(pname.0)")
+    print("Ціна: \(pname.1) \(pname.2)")
+    print("Сокет: \(pname.3)")
+    print("Процессор: \(pname.4)")
+}
+    
 
 /*
  
- Пункт 1.1
  
- Викороистовуючи цикил For виведіть у консоль усю інформацію про всі товари у наступному форматі:
+ 
+ Викороистовуючи цикл For виведіть у консоль усю інформацію про всі товари у наступному форматі:
  ------------------- порядковий номер товару -------------------------------
  Назва товару: значення, Ціна: знак валюти і значення
  Сокет: значення, Процессор: значення
