@@ -490,6 +490,7 @@ var curr:Currency = .usd
  створити змінну типу MotherBoard і спробувати поміняти їй інші значення
  
  */
+print("\n")
 struct MotherBoard{
     var socet:String
     var processor:ProcessorType
@@ -513,8 +514,18 @@ print(mb.processor)
  створити змінну типу Product і спробувати поміняти їй інші значення
  
  */
-
-
+print ("\n")
+class Product {
+    var name:String = ""
+    var price:Double = 15.0
+    var currency:Currency = .eur
+    var motherboard:MotherBoard = .init(socet: "", processor: .AMD)
+    
+}
+let Productexmpl = Product()
+var exmp = Productexmpl.currency
+exmp = .uah
+print(exmp)
 
 
 
