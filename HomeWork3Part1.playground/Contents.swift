@@ -192,12 +192,11 @@ for counter2 in 0 ..< cart.count{
         print("Сокет: \(pname.3)")
         counter2 + 1
     }
-    
-    
-        
-    
+    else {
+        false
+    }
 }
-
+print("\n")
 
 
 
@@ -244,9 +243,24 @@ for counter2 in 0 ..< cart.count{
      }
     
  */
+var counter3 = 0
 
-
-
+for counter3 in 0 ..< cart.count{
+    let pname1 = cart[counter3]
+    switch pname1.4 {
+    case "Intel":
+        print("------------------- \(counter3 + 1) -------------------------------")
+        print("Назва товару: \(pname1.0)")
+        print("Ціна: \(pname1.1 )\(pname1.2)")
+        print(pname1.4)
+        counter3 + 1
+    case "AMD":
+        false
+    default:
+        print("")
+        
+    }
+}
 /*
  
  Розділ 2 - Функції
