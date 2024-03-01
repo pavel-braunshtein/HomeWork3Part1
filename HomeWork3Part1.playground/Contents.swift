@@ -179,8 +179,24 @@ print("\n")
     Сокет: s1151
     ------------------------------------------------------
  */
+var counter2 = 0
+var ppp = cart[counter2]
 
-
+for counter2 in 0 ..< cart.count{
+    let pname = cart[counter2]
+    
+    if pname.1 <= 5000.0 {
+        print("------------------- \(counter2 + 1) -------------------------------")
+        print("Назва товару: \(pname.0)")
+        print("Ціна: \(pname.1 )\(pname.2)")
+        print("Сокет: \(pname.3)")
+        counter2 + 1
+    }
+    
+    
+        
+    
+}
 
 
 
