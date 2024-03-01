@@ -490,9 +490,12 @@ var curr:Currency = .usd
  створити змінну типу MotherBoard і спробувати поміняти їй інші значення
  
  */
-
-
-
+struct MotherBoard{
+    var socet:String
+    var processor:ProcessorType
+}
+var mb: MotherBoard = .init(socet: "", processor: .AMD)
+print(mb.processor)
 
 
 
