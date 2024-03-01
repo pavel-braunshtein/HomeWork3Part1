@@ -1,5 +1,5 @@
 import Foundation
-
+import Darwin
 /*
  
  Домашнє завдання 3
@@ -391,9 +391,37 @@ priceSearcher(maxPrice: Double(rnd))
      -----------------------------------------------------------------------------------------
  
  */
-
-
-
+func procSearcher(processor: String) {
+    var counter6 = 0
+    let dmax = Double.greatestFiniteMagnitude
+    
+    print("------------ Найдорожчий товар за процесором \(processor) ---------")
+    
+    // Вычисляем максимальную цену один раз перед циклом
+    let maxPrice = cart.filter { $0.4 == processor }.map { $0.1 }.max() ?? 0
+    
+    for counter6 in 0..<cart.count {
+        let pname1 = cart[counter6]
+        
+        switch processor {
+        case "Intel":
+            if pname1.1 == maxPrice, pname1.4 == "Intel" {
+                print("Назва товару: \(pname1.0), Ціна: \(pname1.1)\(pname1.2)")
+            }
+            
+        case "AMD":
+            if pname1.1 == maxPrice, pname1.4 == "AMD" {
+                print("Назва товару: \(pname1.0), Ціна: \(pname1.1)\(pname1.2)")
+            }
+            
+        default:
+            print("1")
+        }
+    }
+}
+let processors = ["Intel", "AMD"]
+let randomProcessor = processors.randomElement() ?? " "
+procSearcher(processor: randomProcessor)
 
 
 /*
