@@ -441,8 +441,12 @@ procSearcher(processor: randomProcessor)
  створити змінну типу створенного enum з якимось із значень
  
  */
-
-
+enum ProcessorType:String {
+    case Intel = "Intel"
+    
+    case AMD = "AMD"
+}
+var smthng:ProcessorType = .Intel
 
 
 
