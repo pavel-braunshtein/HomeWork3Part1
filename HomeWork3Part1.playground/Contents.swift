@@ -318,7 +318,7 @@ func IntelSearcher(){
     print("------------------------------------------------------")
 }
 IntelSearcher()
-
+print("\n")
 
 /*
  
@@ -348,8 +348,24 @@ IntelSearcher()
  !! не забудьте перевірити роботу функції викликавши її з максимальним значенням на свій розсуд для перевірки
  
  */
-
-
+func priceSearcher(maxPrice: Double){
+    print("------------------- Товари з ціною менше \(maxPrice) -------------------------------")
+    var counter5 = 0
+    for counter5 in 0 ..< cart.count{
+        let pname = cart[counter5]
+        
+        if pname.1 <= maxPrice {
+            print("\(counter5+1)) Назва товару: \(pname.0),","Ціна: \(pname.1 )\(pname.2)")
+            counter5 + 1
+        }
+        else {
+            false
+        }
+    }
+    print("\n")
+}
+var rnd = Int.random(in: 2000...11000)
+priceSearcher(maxPrice: Double(rnd))
 
 
 
