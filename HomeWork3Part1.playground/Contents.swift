@@ -464,8 +464,12 @@ var smthng:ProcessorType = .Intel
  
  */
 
-
-
+enum Currency: String {
+    case uah = "UAH"
+    case usd = "USD"
+    case eur = "EUR"
+}
+var curr:Currency = .usd
 
 
 /*
