@@ -261,6 +261,7 @@ for counter3 in 0 ..< cart.count{
         
     }
 }
+print("\n")
 /*
  
  Розділ 2 - Функції
@@ -296,8 +297,27 @@ for counter3 in 0 ..< cart.count{
  !! не забудьте перевірити роботу функції викликавши її
  
  */
+func IntelSearcher(){
+    print("------------------- \("Intel") -------------------------------")
+    var counter4 = 0
 
-
+    for counter4 in 0 ..< cart.count{
+        let pname1 = cart[counter4]
+        switch pname1.4 {
+        case "Intel":
+            print("\(counter4+1) Назва товару: \(pname1.0)")
+            
+            counter4 + 1
+        case "AMD":
+            false
+        default:
+            print("")
+            
+        }
+    }
+    print("------------------------------------------------------")
+}
+IntelSearcher()
 
 
 /*
